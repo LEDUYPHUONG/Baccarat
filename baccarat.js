@@ -59,7 +59,7 @@ function odds(e) {
     // odds: tỉ lệ cược
     // pet: cược
     var minpet = +document.getElementById("BetLevel").value;
-    var petX1 = minpet * 1;
+    var petX1 = minpet;
     var petX2 = minpet * 2;
     var petX3 = minpet * 2 * 2;
     var petX4 = minpet * 2 * 2 * 2 ;
