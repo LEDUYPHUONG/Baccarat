@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font EB Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Animate-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./baccarat.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav_bar">
+                <div class="logoAtomSpinner">
+                    <div class="content">
+                        <div class="atom-spinner">
+                            <div class="spinner-inner">
+                                <div class="spinner-line"></div>
+                                <div class="spinner-line"></div>
+                                <div class="spinner-line"></div>
+                                <div class="spinner-circle">&#9679</div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="animate__animated animate__bounce animate__slower 3s animate__delay-2s animate__infinite	infinite"><span class="blue">Xanh</span>  <span class="red">Đỏ</span> </h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form action="">
+                <div class="minpet_out">
+                    <label for="BetLevel">Mức cược tối thiểu</label>
+                        <select id="BetLevel" name="BetLevel">
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                        </select>
+                </div>
+                <div id="alert_noBet" class="alert_noBet">Vui lòng đặt cược!</div>
+                <div class="reset">
+                    <button type="button" id="buttonreset" onclick="clickResetButton(event)">Reset</button>
+                </div>
+                <div class="out_table">
+                    <div id="table_blue" class="table_blue">
+                        <div class="button_radioBlue">
+                            <input onclick="clickBetBlu(event)" type="radio" id="blue_radio" name="fav_language" value="Blue">
+                            <label onclick="clickBetBlu(event)" for="html">Blue</label>
+                        </div>
+                        <button id="ButtonBetBlu" onclick="clickBetBlu(event)" type="button">Cược xanh</button>
+                    </div>
+    
+                    <div id="table_red" class="table_red">
+                        <div class="button_radioRed">
+                            <input onclick="clickBetRed(event)" type="radio" id="red_radio" name="fav_language" value="Red">
+                            <label onclick="clickBetRed(event)" for="css">Red</label>
+                        </div>
+                        <button id="ButtonBetRed" onclick="clickBetRed(event)" type="button">Cược đỏ</button>
+                    </div>
+                </div>
+                <div id="bet_button_out" class="bet_button_out">
+                    <button type="button" id="bet_button" class="bet_button" onclick="odds(event)">Cược</button>
+                </div>
+                <div class="next_bet">
+                    <span id="odds"></span>
+                    <!-- tỉ lệ cược -->
+                </div>
+                <div id="footer_main" class="footer_main">
+                    <button type="button" id="buttonWin" class="buttonWin" onclick="countWin(event) ">Win</button>
+                </div>
+                <div class="result_bet">
+                    <span id="result_bet"></span>
+                </div>
+            </form>
+        </div>
+    </main>
+    </main>
+    <footer></footer>
+    <script src="./baccarat.js"></script>
+</body>
+</html>
