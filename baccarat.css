@@ -212,7 +212,7 @@ header h1 .red{
 #buttonreset{
     width: 300px;
 }
-.buttonWin{
+.buttonWin, .buttonDrow{
     opacity: 0;
 }
 

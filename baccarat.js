@@ -6,6 +6,7 @@ function clickResetButton(e) {
     document.getElementById("odds").innerHTML = "";
     document.getElementById("result_bet").innerHTML = "";
     document.getElementById("buttonWin").style.opacity = "0";
+    document.getElementById("buttonDrow").style.opacity = "0";
     document.getElementById("bet_button").style.opacity = "0";
     countClickBet = 0;
     countNumberWin = 0;
@@ -22,6 +23,7 @@ function clickBetBlu(e) {
     document.getElementById("ButtonBetBlu").style.boxShadow = "0px 0px 40px lightblue";
     document.getElementById("ButtonBetBlu").style.color = "blue";
     document.getElementById("buttonWin").style.opacity = "0";
+    document.getElementById("buttonDrow").style.opacity = "0";
     document.getElementById("bet_button").style.opacity = "1";
 
     
@@ -37,6 +39,7 @@ function clickBetRed(e) {
     document.getElementById("ButtonBetRed").style.boxShadow = "0px 0px 40px lightblue";
     document.getElementById("ButtonBetRed").style.color = "red";
     document.getElementById("buttonWin").style.opacity = "0";
+    document.getElementById("buttonDrow").style.opacity = "0";
     document.getElementById("bet_button").style.opacity = "1";
 }
 
@@ -71,36 +74,43 @@ function odds(e) {
     if (countClickBet === 1) {
         document.getElementById("odds").innerHTML= "X1 = " + petX1 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet === 2) {
         document.getElementById("odds").innerHTML = "X2 = " + petX2 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet === 3) {
         document.getElementById("odds").innerHTML = "X3 = " + petX3 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet === 4) {
         document.getElementById("odds").innerHTML = "X4 = " + petX4 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet === 5) {
         document.getElementById("odds").innerHTML = "X5 = " + petX5 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet === 6) {
         document.getElementById("odds").innerHTML = "X6 = " + petX6 ;
         document.getElementById("buttonWin").style.opacity = "1";
+        document.getElementById("buttonDrow").style.opacity = "1";
         return;
     }
     if (countClickBet > 6) {
         document.getElementById("odds").innerHTML = "Bạn đã hết 1 dây, vui lòng đặt lại dây mới bằng cách bấm nút reset bên trên!";
         document.getElementById("buttonWin").style.opacity = "0";
+        document.getElementById("buttonDrow").style.opacity = "0";
         removeChooseOption();
         return;
     }
@@ -163,6 +173,7 @@ function countWin(e) {
     document.getElementById("bet_button").style.opacity = "0";
     document.getElementById("odds").innerHTML = "";
     document.getElementById("buttonWin").style.opacity = "0";
+    document.getElementById("buttonDrow").style.opacity = "0";
     removeChooseOption();
     document.getElementById("alert_noBet").innerHTML = "Chúc mừng bạn đã Win!";
     if (countNumberWin > 15) {
@@ -170,4 +181,12 @@ function countWin(e) {
 
         
     }
+}
+
+function countDrow(e) {
+    countClickBet += -1;
+    document.getElementById("buttonWin").style.opacity = "0";
+    document.getElementById("buttonDrow").style.opacity = "0";
+    removeChooseOption();
+    document.getElementById("alert_noBet").innerHTML = "Hòa rồi, cược lại nào!";
 }
