@@ -60,11 +60,11 @@ function odds(e) {
     // pet: cược
     var minpet = +document.getElementById("BetLevel").value;
     var petX1 = minpet * 1;
-    var petX2 = petX1 * 2;
-    var petX3 = petX2 * 2;
-    var petX4 = petX3 * 2;
-    var petX5 = petX4 * 2;
-    var petX6 = petX5 * 2;
+    var petX2 = minpet * 2;
+    var petX3 = minpet * 2 * 2;
+    var petX4 = minpet * 2 * 2 * 2 ;
+    var petX5 = minpet * 2 * 2 * 2 * 2;
+    var petX6 = minpet * 2 * 2 * 2 * 2 * 2;
 
     countClickBet += 1;
     document.getElementById("alert_noBet").innerHTML = "Bạn đã đặt cược thành công!";
